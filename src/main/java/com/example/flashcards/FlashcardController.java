@@ -17,6 +17,7 @@ public class FlashcardController {
     private int countAlmost = 0;
     private int countPartially =0;
     private int countNot = 0;
+    private int countShown = 0;
     private int MAX = 10;
 
     private final ObservableList<Flashcard> flashcards = FXCollections.observableArrayList();
@@ -56,12 +57,16 @@ public class FlashcardController {
     void addAlmost(ActionEvent event) {
         countAlmost++;
         almostAnswer.setText(String.valueOf(countAlmost));
+        countShown++;
+        shownCards.setText(String.valueOf(countShown));
     }
 
     @FXML
     void addCorrect(ActionEvent event) {
         if(countCorrect < MAX) {
         correctAnswer.setText(String.valueOf(++countCorrect));
+            countShown++;
+        shownCards.setText(String.valueOf(countShown));
         }
         if (countCorrect == MAX) {
             showEndScreen();
@@ -72,12 +77,16 @@ public class FlashcardController {
     void addNot(ActionEvent event) {
         countNot++;
         notAnswer.setText(String.valueOf(countNot));
+        countShown++;
+        shownCards.setText(String.valueOf(countShown));
     }
 
     @FXML
     void addPartially(ActionEvent event) {
         countPartially++;
         partiallyAnswer.setText(String.valueOf(countPartially));
+        countShown++;
+        shownCards.setText(String.valueOf(countShown));
     }
 
     private void showEndScreen() {
@@ -89,6 +98,9 @@ public class FlashcardController {
     }
 
     public void initialize() {
-        numberOfCards.setText("10");
+        numberOfCards.setText(String.valueOf(MAX));
+        cardsNotShown.setText(String.valueOf(MAX));
+        shownCards.setText("0");
+        answer.setEditable(false);
     }
 }
