@@ -16,7 +16,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1000.0">
          <children>
-            <Button mnemonicParsing="false" text="Restart">
+            <Button mnemonicParsing="false" onAction="#restart" text="Restart">
                <HBox.margin>
                   <Insets right="5.0" />
                </HBox.margin>

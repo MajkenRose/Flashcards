@@ -66,7 +66,7 @@ public class FlashcardController {
         if(countCorrect < MAX) {
         correctAnswer.setText(String.valueOf(++countCorrect));
             countShown++;
-        shownCards.setText(String.valueOf(countShown));
+            shownCards.setText(String.valueOf(countShown));
         }
         if (countCorrect == MAX) {
             showEndScreen();
@@ -86,6 +86,20 @@ public class FlashcardController {
         countPartially++;
         partiallyAnswer.setText(String.valueOf(countPartially));
         countShown++;
+        shownCards.setText(String.valueOf(countShown));
+    }
+
+    @FXML
+    void restart(ActionEvent event) {
+        countCorrect = 0;
+        countAlmost = 0;
+        countPartially = 0;
+        countNot = 0;
+        countShown = 0;
+        correctAnswer.setText(String.valueOf(countCorrect));
+        almostAnswer.setText(String.valueOf(countAlmost));
+        partiallyAnswer.setText(String.valueOf(countPartially));
+        notAnswer.setText(String.valueOf(countNot));
         shownCards.setText(String.valueOf(countShown));
     }
 
