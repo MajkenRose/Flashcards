@@ -103,6 +103,22 @@ public class FlashcardController {
         shownCards.setText(String.valueOf(countShown));
     }
 
+
+    @FXML
+    void endExercise(ActionEvent event) {
+
+    }
+
+    @FXML
+    void pause(ActionEvent event) {
+
+    }
+
+    @FXML
+    void showAnswer(ActionEvent event) {
+
+    }
+
     private void showEndScreen() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("End Screen");

@@ -24,7 +24,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Pause">
+            <Button mnemonicParsing="false" onAction="#pause" text="Pause">
                <HBox.margin>
                   <Insets right="5.0" />
                </HBox.margin>
@@ -32,7 +32,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="End exercise">
+            <Button mnemonicParsing="false" onAction="#endExercise" text="End exercise">
                <font>
                   <Font size="14.0" />
                </font>
@@ -54,7 +54,7 @@
                   <Insets left="5.0" right="20.0" />
                </HBox.margin>
             </Label>
-            <Button mnemonicParsing="false" text="Show Answer">
+            <Button mnemonicParsing="false" onAction="#showAnswer" text="Show Answer">
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
